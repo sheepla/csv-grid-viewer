@@ -7,8 +7,8 @@
 **CSV Grid Viewer** is a simple Web-based CSV grid viewer, built with [React](https://react.dev), [MUI](https://mui.com), and [AG-Grid Community Edition](https://www.ag-grid.com/).
 
 <div align="center" style="display: flex; align-items: center;">
-  <img src="./screenshots/screenshot_light.png" width="30%">
-  <img src="./screenshots/screenshot_dark.png" width="30%">
+  <img src="./screenshots/screenshot_light.png" width="40%">
+  <img src="./screenshots/screenshot_dark.png" width="40%">
 </div>
 
 ## Features
