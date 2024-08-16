@@ -1,4 +1,5 @@
-import React from "react";
+
+import React, { useState } from "react";
 import {
   AppBar,
   Toolbar,
@@ -11,6 +12,8 @@ import {
 
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
+import InfoIcon from "@mui/icons-material/Info";
+import AboutDialog from "./AboutDialog";
 
 function Header({
   isDarkMode,
@@ -19,31 +22,50 @@ function Header({
   isDarkMode: boolean;
   handleToggleDarkMode: () => void;
 }) {
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
-    <AppBar position="static">
-      <Toolbar>
+    <>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h1" sx={{ flexGrow: 1 }}>
+            CSV Grid Viewer
+          </Typography>
 
-        <Typography variant="h1" sx={{ flexGrow: 1 }}>
-          CSV Grid Viewer
-        </Typography>
+          <Box sx={{ display: "flex", alignItems: "center" }}>
+            {isDarkMode ? (
+              <DarkModeIcon sx={{ m: 1 }} />
+            ) : (
+              <LightModeIcon sx={{ m: 1 }} />
+            )}
 
-        <Box sx={{ display: "flex", alignItems: "center" }}>
-          {isDarkMode ? (
-            <DarkModeIcon sx={{ m: 1 }} />
-          ) : (
-            <LightModeIcon sx={{ m: 1 }} />
-          )}
+            <Tooltip title="Switch Dark Mode" arrow>
+              <Switch
+                checked={isDarkMode}
+                onChange={handleToggleDarkMode}
+                inputProps={{ "aria-label": "toggle dark mode" }}
+              />
+            </Tooltip>
 
-          <Tooltip title="Switch Dark Mode" arrow>
-            <Switch
-              checked={isDarkMode}
-              onChange={handleToggleDarkMode}
-              inputProps={{ "aria-label": "toggle dark mode" }}
-            />
-          </Tooltip>
-        </Box>
-      </Toolbar>
-    </AppBar>
+            <Tooltip title="About this App" arrow>
+              <IconButton color="inherit" onClick={handleClickOpen}>
+                <InfoIcon />
+              </IconButton>
+            </Tooltip>
+          </Box>
+        </Toolbar>
+      </AppBar>
+
+      <AboutDialog open={open} onClose={handleClose} />
+    </>
   );
 }
 

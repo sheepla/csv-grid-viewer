@@ -27,10 +27,10 @@ const App: React.FC = () => {
         typography: {
           fontSize: 10,
           h1: {
-            fontSize: '1.6rem', // 特定のフォントサイズを調整する例
+            fontSize: '1.6rem',
           },
           h2: {
-            fontSize: '1.4rem', // 特定のフォントサイズを調整する例
+            fontSize: '1.4rem',
           },
         }
       }),
