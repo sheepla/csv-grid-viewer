@@ -25,7 +25,7 @@ const App: React.FC = () => {
           secondary: deepPurple,
         },
         typography: {
-          fontSize: 9,
+          fontSize: 10,
           h1: {
             fontSize: '1.6rem', // 特定のフォントサイズを調整する例
           },
@@ -60,7 +60,7 @@ const App: React.FC = () => {
       <CssBaseline >
 
         <Header isDarkMode={darkMode} handleToggleDarkMode={handleDarkModeToggle} />
-        <Container>
+        <Container maxWidth={false}>
           <CsvUploader onDataLoaded={handleDataLoaded} />
           <DataGrid rowData={rowData} columnDefs={columnDefs} isDarkMode={darkMode} />
         </Container>

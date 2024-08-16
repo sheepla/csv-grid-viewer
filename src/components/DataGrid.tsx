@@ -83,7 +83,7 @@ const DataGrid: React.FC<DataGridProps> = ({ rowData, columnDefs, isDarkMode }) 
   const dataGridThemeClassName = isDarkMode ? "ag-theme-balham-dark" : "ag-theme-balham";
 
   return (
-    <Container>
+    <Container maxWidth={false}>
       <Box className={dataGridThemeClassName} sx={{ height: 400, width: '100%' }}>
         <AgGridReact
           rowData={rowData}
