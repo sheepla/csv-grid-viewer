@@ -15,7 +15,7 @@
 
 ## Features
 
-- [x] Allows to upload local CSV file 📝
+- [x] Allows to load local CSV file 📝
 - [x] Sorting and filtering any columns ⏬
 - [x] Supports dark mode 🌙
 
