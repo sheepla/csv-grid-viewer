@@ -17,17 +17,25 @@
 - [x] Sorting and filtering any columns ⏬
 - [x] Supports dark mode 🌙
 
-## Build
+## Development
 
-Running `yarn build`, the static web contents are emitted in the `build` directory.
+Running `yarn tauri dev`, start a development build of the app.
 
 ```sh
-yarn build
+yarn tauri dev
+```
+
+## Build
+
+Running `yarn tauri build`, AppImage, deb and rpm in `src-tauri/target/release/bundle/`.(Linux)
+
+```sh
+yarn tauri build
 ```
 
 ## Deploy
 
-It is built as a typical static single-page application. 
+It can also be built as a typical static single-page application. 
 It can be distributed using a web server such as Apache or Nginx or a tool such as [vercel/serve](https://github.com/vercel/serve).
 
 ```sh
