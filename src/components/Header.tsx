@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React from "react";
 import {
   AppBar,
   Toolbar,
@@ -22,7 +22,7 @@ function Header({
   isDarkMode: boolean;
   handleToggleDarkMode: () => void;
 }) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
     setOpen(true);

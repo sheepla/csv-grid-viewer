@@ -10,8 +10,6 @@ import {
   Typography,
   Box,
   Divider,
-  IconButton,
-  Tooltip,
 } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 
