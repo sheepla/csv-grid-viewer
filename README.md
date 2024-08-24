@@ -39,17 +39,6 @@ Running `yarn tauri build`, AppImage, deb and rpm in `src-tauri/target/release/b
 yarn tauri build
 ```
 
-## Launch as Web application
-
-It can also be built as a typical static single-page application. 
-It can be distributed using a web server such as Apache or Nginx or a tool such as [vercel/serve](https://github.com/vercel/serve).
-
-```sh
-npm install --global serve
-serve --single build --listen 8080
-```
-
-
 ## Author
 
 [sheepla](https://github.com/sheepla)
