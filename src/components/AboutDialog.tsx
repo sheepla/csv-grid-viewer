@@ -12,7 +12,7 @@ import {
   Divider,
 } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { open as browserOpen} from "@tauri-apps/api/shell";
+import { open as browserOpen } from "@tauri-apps/api/shell";
 
 const AboutDialog: React.FC<{ open: boolean; onClose: () => void }> = ({ open, onClose }) => {
   return (
